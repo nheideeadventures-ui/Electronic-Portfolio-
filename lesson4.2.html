@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sektor ng Agrikultura</title>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(#f0f8ff, #e6f0ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* ---------- PAGE BORDER ---------- */
+.page-border {
+  border: 12px double #a8d0e6;
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  background: linear-gradient(145deg, #ffffffcc, #e0f0ffcc);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+.navbar a {
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+  background: rgba(255,255,255,0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #2c3e50;
+  box-shadow: 0 0 10px #a8d0e6;
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #6fa8dc;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+header h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3em;
+  color: #3b5998;
+  text-shadow: 0 0 10px #a8d0e6;
+}
+header p {
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+
+/* ---------- CONTENT BOXES ---------- */
+.content-box {
+  background: linear-gradient(135deg, #cce0ff, #f0f8ff);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15), 0 0 15px #6fa8dc;
+}
+.content-box h2 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+.content-box p, .content-box ul {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5em;
+  margin: 5px 0;
+}
+.content-box ul {
+  padding-left: 20px;
+}
+
+/* ---------- PHOTO BOXES ---------- */
+.photo-boxes {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.photo-box {
+  width: 48%;
+  min-height: 200px;
+  background: #ffffff88;
+  border-radius: 15px;
+  border: 2px dashed #6fa8dc;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.photo-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #6fa8dc;
+}
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #2c3e50;
+  margin-top: 20px;
+}
+
+/* FULLSCREEN MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-border">
+  <nav class="navbar">
+    <a href="ap-q3q4.html">⏪ Back to AP Page</a>
+  </nav>
+
+  <header>
+    <h1>🌾 Agrikultura</h1>
+    <p>Aralin 2 - Quarter 4</p>
+  </header>
+
+  <!-- CONTENT BOXES -->
+  <div class="content-box">
+    <h2>Ano ang Agrikultura?</h2>
+    <p>Isang agham at sining na may kinalaman sa pagpaparami ng mga hayop at mga tanim o halaman. Ito ay may kaugnayan sa lahat ng gawain na sangkot ang mga hayop at halaman.</p>
+    <p><strong>Pinagmulan ng salita:</strong> AGER = Lupa; CULTURA = Paglilinang</p>
+  </div>
+
+  <div class="content-box">
+    <h2>MGA GAWAIN SA SEKTOR NG AGRIKULTURA</h2>
+    <ul>
+      <li>Pagsasaka</li>
+      <li>Pangingisda</li>
+      <li>Paghahayupan</li>
+      <li>Paggugubat/Pagtotroso</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Gampanin ng Pagsasaka</h2>
+    <p>Pangunahing pananim: palay, mais, niyog, tubo, saging, pinya, atbp. na karaniwang kinokonsumo sa loob at labas ng bansa.</p>
+    <p>Tinatayang umabot ng ₱797.731 bilyon ang kita mula sa pagsasaka.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Gampanin ng Pangingisda</h2>
+    <p>Nauuri sa tatlo: komersiyal, munisipal, at aquaculture. Bahagi din nito ang panghuhuli ng hipon, sugpo.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Gampanin ng Paghahayupan</h2>
+    <p>May kinalaman sa mga hayop na itinaas para sa karne, hibla, gatas, itlog, atbp. Kasama rito ang pang-araw-araw na pangangalaga, pagpili ng pag-aanak at pagpapalaki ng mga hayop.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Gampanin ng Paggugubat</h2>
+    <p>Patuloy na nililinang ang ating mga kagubatan bagamat tayo ay nahaharap sa suliranin ng pagkaubos ng mga yaman nito. Pinagkukunan ng plywood, tabla, troso, at veneer. Pinagkakakitaan din ang rattan, nipa, anahaw, kawayan, atbp.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Kahalagahan ng Agrikultura</h2>
+    <ul>
+      <li>Pinagmumulan ng pagkain</li>
+      <li>Pinagkukunan ng hilaw na materyales upang makabuo ng panibagong produkto</li>
+      <li>Nagkakaloob ng trabaho sa maraming Pilipino</li>
+      <li>Nagpapasok ng dolyar sa bansa</li>
+      <li>Pinagkukunan ng sobrang manggagawa patungo sa ibang sektor ng ekonomiya</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Suliranin sa Agrikultura</h2>
+    <p><strong>Pagsasaka:</strong> pagliit ng lupang sakahan, kakulangan ng makabagong teknolohiya, kakulangan ng pasilidad at imprastraktura, kakulangan ng suporta mula sa iba pang sektor, prayoridad sa industriya, epekto ng climate change.</p>
+    <p><strong>Pangingisda:</strong> mapanirang operasyon ng malalaking komersiyal na mangingisda, epekto ng polusyon sa pangisdaan, lumalaking populasyon ng bansa, kahirapan sa hanay ng mga mangingisda.</p>
+    <p><strong>Paghahayupan:</strong> pagkakaroon ng mga peste sa alagang hayop tulad ng baboy at manok.</p>
+    <p><strong>Paggugubat:</strong> mabilis na pagkaubos ng mga likas na yaman.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Mga Patakaran at Programa</h2>
+    <ul>
+      <li>Panahon bago nasakop ang Pilipinas – lupa sa pamamagitan ng pagiging unang nagtayo ng bahay</li>
+      <li>Panahon ng Kastila – Encomienda System</li>
+      <li>Panahon ng Amerikano – Land Registration Act 1902, Public Land Act 1902</li>
+      <li>Panahon ng Kasarinlan – Batas Republika Blg. 1160, CARP 1988, Atas ng Pangulo Blg. 2/27</li>
+      <li>CARP 2003 – gulayan, scholarship program, kalahi agrarian reform zones</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Sangay ng Pamahalaan na Tinutulungan ang Agrikultura</h2>
+    <ul>
+      <li>Department of Agriculture (DA)</li>
+      <li>Bureau of Fisheries and Aquatic Resources (BFAR)</li>
+      <li>Bureau of Animal Industry (BAI)</li>
+      <li>Ecosystem Research and Development Bureau (ERDB)</li>
+      <li>LANDBANK of the Philippines</li>
+    </ul>
+  </div>
+
+  <!-- PHOTO BOXES -->
+<div class="photo-boxes">
+  <div class="photo-box" onclick="openModal('agrikultura1.jpg')">
+    <img src="agrikultura1.jpg" alt="Agrikultura 1">
+  </div>
+  <div class="photo-box" onclick="openModal('agrikultura2.jpg')">
+    <img src="agrikultura2.jpg" alt="Agrikultura 2">
+  </div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
