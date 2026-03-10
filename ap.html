@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📘 Araling Panlipunan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- keep your original styles -->
+
+  <style>
+    /* ------------------------ */
+    /* LAYOUT FIXES FOR AP PAGE */
+    /* ------------------------ */
+
+    body {
+      margin: 0;
+      min-height: 100vh;          /* full viewport height */
+      position: relative;          /* for floating emojis */
+      font-family: 'Quicksand', sans-serif;
+      overflow-x: hidden;
+      background: linear-gradient(to bottom right, #e6f0ff, #fff5f8); /* original background */
+    }
+
+    /* main wrapper for content + emojis */
+    .ap-content {
+      position: relative;           /* emojis positioned relative to this */
+      z-index: 1;                   /* behind content */
+      min-height: calc(100vh - 140px); /* fill space between header+footer approx */
+    }
+
+    /* floating emojis */
+    .floating-emoji {
+      position: absolute;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+      opacity: 0.6;
+      z-index: 0;                   /* behind buttons/content */
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); opacity: 0.3; }
+      to   { transform: translateY(-10vh) rotate(360deg); opacity: 0.7; }
+    }
+
+    /* header, navbar, footer, buttons left untouched so original styles stay */
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="personal.html">🌸 Personal Space</a>
+    <a href="ict.html">💻 ICT</a>
+    <a href="ap.html">📘 AP</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>📘 Araling Panlipunan Lessons</h1>
+    <p class="intro">Pindutin ang lesson na nais aralin! 💕</p>
+  </header>
+
+  <!-- MAIN CONTENT + EMOJIS -->
+  <main class="ap-content">
+    <!-- floating emojis -->
+    <div class="floating-emoji" style="left:10%;">💖</div>
+    <div class="floating-emoji" style="left:30%; animation-delay:2s;">🌸</div>
+    <div class="floating-emoji" style="left:50%; animation-delay:4s;">📘</div>
+    <div class="floating-emoji" style="left:70%; animation-delay:1s;">✨</div>
+    <div class="floating-emoji" style="left:90%; animation-delay:3s;">💫</div>
+
+    <!-- lesson buttons -->
+    <div class="ap-buttons">
+      <a href="lesson1.html" class="lesson-btn">Lesson 1 – Demand</a>
+      <a href="lesson2.html" class="lesson-btn">Lesson 2 – Supply</a>
+      <a href="lesson3.html" class="lesson-btn">Lesson 3 – Price Elasticity</a>
+      <a href="lesson4.html" class="lesson-btn">Lesson 4 – Market Equilibrium</a>
+      <a href="lesson5.html" class="lesson-btn">Lesson 5 – Estruktura ng Pamilihan</a>
+      <a href="lesson6.html" class="lesson-btn">Lesson 6 – Bahaging Ginagampanan ng Pamahalaan</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with 💖 by Nicole Kierulf</p>
+  </footer>
+</body>
+</html>
