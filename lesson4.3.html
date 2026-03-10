@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP - Lesson 3</title>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(#fff3e6, #ffe6cc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* ---------- PAGE BORDER ---------- */
+.page-border {
+  border: 12px double #ffb84d;
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  background: linear-gradient(145deg, #fff8f0cc, #ffe6cccc);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+.navbar a {
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+  background: rgba(255,245,230,0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #8c4d00;
+  box-shadow: 0 0 10px #ffb84d;
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffa31a;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+header h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3em;
+  color: #ff8000;
+  text-shadow: 0 0 10px #ffb84d;
+}
+header p {
+  color: #8c4d00;
+  font-size: 1.2em;
+}
+
+/* ---------- CONTENT BOXES ---------- */
+.content-box {
+  background: linear-gradient(135deg, #ffe0b3, #fff3e6);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15), 0 0 15px #ffa31a;
+}
+.content-box h2 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #8c4d00;
+  margin-bottom: 8px;
+}
+.content-box p, .content-box ul {
+  font-size: 1em;
+  color: #4d2600;
+  line-height: 1.5em;
+  margin: 5px 0;
+}
+.content-box ul {
+  padding-left: 20px;
+}
+
+/* ---------- PHOTO BOXES ---------- */
+.photo-boxes {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.photo-box {
+  width: 48%;
+  min-height: 200px;
+  background: #fff5e6cc;
+  border-radius: 15px;
+  border: 2px dashed #ffa31a;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.photo-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffa31a;
+}
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #8c4d00;
+  margin-top: 20px;
+}
+
+/* FULLSCREEN MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-border">
+  <nav class="navbar">
+    <a href="ap-q3q4.html">⏪ Back to AP Page</a>
+  </nav>
+
+  <header>
+    <h1>🏭 Sektor ng Industriya</h1>
+    <p>Lesson 3 - Quarter 4</p>
+  </header>
+
+  <!-- CONTENT BOXES -->
+  <div class="content-box">
+    <h2>Ano ang Industriya?</h2>
+    <p>Tumutukoy sa pagproseso ng mga hilaw na materyal at paggawa ng mga produkto na kinakailangan para sa pampublikong pamilihan. Naglalayong maiproseso ang mga hilaw na materyal upang makabuo ng produkto na ginagamit ng tao.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Sub-sektor ng Industriya</h2>
+    <ul>
+      <li>Pagmimina (Mining) – pagkuha at pagproseso ng mga yamang mineral</li>
+      <li>Pagmamanupaktura (Manufacturing) – paggawa ng produkto gamit ang labor o makina</li>
+      <li>Konstruksyon (Construction) – pagtatayo ng gusali at estruktura</li>
+      <li>Utilities – tubig, kuryente, gas, at iba pang serbisyong pang-impraestruktura</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Kahalagahan ng Industriya</h2>
+    <ul>
+      <li>Tumatanggap ng produkto mula sa agrikultura</li>
+      <li>Nagkakaloob ng trabaho sa maraming Pilipino</li>
+      <li>Nagpapasok ng dolyar sa bansa</li>
+      <li>Gumagamit ng makabagong teknolohiya</li>
+      <li>Gumagawa ng intermediate products para sa ibang produkto</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Pagkakaugnay ng Agrikultura at Industriya</h2>
+    <ul>
+      <li>Hilaw na sangkap mula sa agrikultura ay ginagamit sa industriya</li>
+      <li>Mga produktong industriyal tulad ng traktora ay ginagamit ng mga magsasaka</li>
+      <li>Lakas-paggawa sa industriya at agrikultura ay nagtutulungan</li>
+      <li>Industriya ang nagbibigay ng malaking kontribusyon sa ekonomiya</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Suliranin ng Industriya</h2>
+    <ul>
+      <li>Kakulangan sa pondo at matinding kompetisyon</li>
+      <li>Paghina ng lokal na industriya</li>
+      <li>Mababang demand ng produkto</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Mga Patakarang Pang-ekonomiya</h2>
+    <ul>
+      <li>Filipino First Policy – binigyang-daan ang Pilipino sa pagpapatakbo ng ekonomiya</li>
+      <li>Oil Deregulation Law (R.A. 8479) – presyo ng petrolyo ay sa pamilihan</li>
+      <li>Microfinancing – pautang na may mababang interes sa mahihirap</li>
+      <li>Online Business Policy – e-commerce, online advertisement, auction</li>
+      <li>Retail Nationalization Act (R.A. 1180) – limitadong dayuhang retail</li>
+      <li>Retail Trade Liberalization Act (R.A. 8762) – binuksan ang retail sa dayuhan</li>
+      <li>Build-Operate-Transfer (BOT, R.A. 6957) – karapatang bumuo at patakbuhin ang pasilidad</li>
+      <li>Asset Privatization Trust (APT) – pagbenta ng korporasyon ng gobyerno sa pribado</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Sangay ng Pamahalaan na Tinutulungan ang Industriya</h2>
+    <ul>
+      <li>Department of Trade and Industry (DTI)</li>
+      <li>Board of Investments (BOI)</li>
+      <li>Philippine Economic Zone Authority (PEZA)</li>
+      <li>Securities and Exchange Commission (SEC)</li>
+    </ul>
+  </div>
+
+  <!-- PHOTO BOXES -->
+<div class="photo-boxes">
+  <div class="photo-box" onclick="openModal('industriya1.jpg')">
+    <img src="industriya1.jpg" alt="Industriya 1">
+  </div>
+  <div class="photo-box" onclick="openModal('industriya2.jpg')">
+    <img src="industriya2.jpg" alt="Industriya 2">
+  </div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

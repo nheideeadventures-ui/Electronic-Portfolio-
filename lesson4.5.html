@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impormal na Sektor</title>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #fff8e1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fff8e1 0px,
+    #fff8e1 24px,
+    #fff3c4 25px
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ---------- PAGE BORDER ---------- */
+.page-border {
+  border: 8px dotted #f4c542;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255,248,224,0.95);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+.navbar a {
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+  background: rgba(255,255,200,0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #b28f00;
+  box-shadow: 0 0 10px #f4c542;
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #b28f00;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+header h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3em;
+  color: #b28f00;
+  text-shadow: 0 0 10px #f4c542;
+}
+header p {
+  color: #8a6d00;
+  font-size: 1.2em;
+}
+
+/* ---------- CONTENT BOXES ---------- */
+.content-box {
+  background: linear-gradient(135deg, #fff3c4, #fffde7);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15), 0 0 15px #b28f00;
+}
+.content-box h2 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #b28f00;
+  margin-bottom: 8px;
+}
+.content-box p, .content-box ul {
+  font-size: 1em;
+  color: #8a6d00;
+  line-height: 1.5em;
+  margin: 5px 0;
+}
+.content-box ul {
+  padding-left: 20px;
+}
+
+/* ---------- PHOTO BOXES ---------- */
+.photo-boxes {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.photo-box {
+  width: 48%;
+  min-height: 200px;
+  background: #fffde7cc;
+  border-radius: 15px;
+  border: 2px dashed #b28f00;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.photo-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #b28f00;
+}
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #8a6d00;
+  margin-top: 20px;
+}
+
+/* FULLSCREEN MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-border">
+  <nav class="navbar">
+    <a href="ap-q3q4.html">⏪ Back to AP Page</a>
+  </nav>
+
+  <header>
+    <h1>🛍️ Impormal na Sektor</h1>
+    <p>Aralin 5 - Quarter 4</p>
+  </header>
+
+  <!-- CONTENT BOXES -->
+  <div class="content-box">
+    <h2>Ano ang Impormal na Sektor?</h2>
+    <p>Sektor ng ekonomiya na walang pormal o salat sa mga dokumentong kailangan sa pagsasagawa ng gawaing pang-ekonomiya.</p>
+    <p>Ang kita ng sektor na ito ay <strong>HINDI</strong> naisasama sa kabuuang Gross Domestic Product (GDP) ng bansa.</p>
+    <p>Paraan ng mamamayan upang magkaroon ng kabuhayan/dagdag kita sa tuwing panahon ng pangangailangan.</p>
+    <p>Nagdudulot rin ng pagkakalikha ng mga produkto at serbisyong tutugon sa ating mga pangangailangan.</p>
+    <p>Kilala rin sa tawag na <strong>Underground Economy</strong>.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Halimbawa ng Mga Tao sa Sektor na Ito</h2>
+    <ul>
+      <li>Nagtitinda sa kalsada</li>
+      <li>Pedicab driver</li>
+      <li>Karpintero</li>
+      <li>Hindi rehistradong pampublikong sasakyan</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Katangian ng Impormal na Sektor</h2>
+    <ul>
+      <li>Hindi nakarehistro sa pamahalaan</li>
+      <li>Hindi nagbabayad ng buwis mula sa kinita</li>
+      <li>Walang legal at pormal na balangkas mula sa pamahalaan para sa pagnenegosyo</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Iba’t Ibang Anyo ng Impormal na Sektor</h2>
+    <ul>
+      <li>Mga gawaing maaaring isakatuparan lamang sa loob ng tahanan</li>
+      <li>Mga gawaing pansibiko, pagkakawanggawa, at panrelihiyon</li>
+      <li>Mga sari-sari stores, pagtitinda sa labas ng bahay o sidewalk, paglalako ng kalakal o serbisyo</li>
+      <li>Ilegal na gawain tulad ng pagnanakaw, pagbebenta ng ilegal na gamot, piracy, at prostitusyon</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Kahalagahan ng Impormal na Sektor</h2>
+    <ul>
+      <li>Sinasalo nito ang mga mamamayan na hindi makapasok bilang mga regular na empleyado sa isang kompanya</li>
+      <li>Nagbibigay ng pagkakataon sa maraming Pilipino na makapaghanapbuhay</li>
+      <li>Nagsisilbing tagasalo ng mga mamamayang may mahigpit na pangangailangan</li>
+      <li>Malaki ang naitutulong sa mga konsyumer ang mga kalakal at serbisyong mula sa impormal na sektor dahil sa MURA nitong halaga</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Dahilan ng Pagpasok sa Impormal na Sektor</h2>
+    <ul>
+      <li>Makaligtas sa pagbabayad ng buwis sa pamahalaan</li>
+      <li>Makaiwas sa masyadong mahaba at masalimuot na proseso ng pakikipagtransaksyon sa pamahalaan (bureaucratic red tape)</li>
+      <li>Kawalan ng regulasyon mula sa pamahalaan na kung saan ang mga batas at programa ay hindi naitutupad nang maayos</li>
+      <li>Makapaghanapbuhay nang hindi nangangailangan ng malaking kapital o puhunan</li>
+      <li>Malabanan ang matinding kahirapan</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Epekto sa Ekonomiya</h2>
+    <ul>
+      <li>Pagbaba ng halaga ng nalilikom na buwis</li>
+      <li>Banta sa kapakanan ng mga mamimili</li>
+      <li>Paglaganap ng mga ilegal na gawain</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Batas, Programa, at Patakarang Pang-ekonomiya</h2>
+    <ul>
+      <li>Social Reform and Poverty Alleviation Act of 1997 (R.A 8425)</li>
+      <li>Magna Carta of Women (R.A 9710)</li>
+      <li>Philippine Labor Code (P.D 422)</li>
+      <li>Technical Education and Skills Development Act of 1994 (R.A 7796)</li>
+      <li>Social Security Act of 1997 (R.A 8282)</li>
+      <li>National Health Insurance Act of 1995 (R.A 7875)</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Programa Para sa Mamamayan</h2>
+    <ul>
+      <li>Dole Integrated Livelihood Program (DILP)</li>
+      <li>Self-Employment Assistance Kaunlaran Program (SEA-K)</li>
+      <li>Integrated Services for Livelihood Advancement of the Fisherfolks (ISLA)</li>
+      <li>Cash-For-Work Program (CWP)</li>
+      <li>Pantawid Pamilyang Pilipino Program (4Ps)</li>
+    </ul>
+  </div>
+
+  <!-- PHOTO BOXES -->
+<div class="photo-boxes">
+  <div class="photo-box" onclick="openModal('impormal1.jpg')">
+    <img src="impormal1.jpg" alt="Impormal 1">
+  </div>
+  <div class="photo-box" onclick="openModal('impormal2.jpg')">
+    <img src="impormal2.jpg" alt="Impormal 2">
+  </div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+</body>
+</html>

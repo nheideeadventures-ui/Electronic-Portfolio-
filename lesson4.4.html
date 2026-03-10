@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sektor ng Paglilingkod</title>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #fdfcf0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fdfcf0 0px,
+    #fdfcf0 24px,
+    #e0f0d0 25px
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* ---------- PAGE BORDER ---------- */
+.page-border {
+  border: 8px dashed #66cdaa;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(240,255,240,0.9);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+.navbar a {
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+  background: rgba(204,255,204,0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #2e8b57;
+  box-shadow: 0 0 10px #66cdaa;
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #2e8b57;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+header h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3em;
+  color: #2e8b57;
+  text-shadow: 0 0 10px #66cdaa;
+}
+header p {
+  color: #3b7550;
+  font-size: 1.2em;
+}
+
+/* ---------- CONTENT BOXES ---------- */
+.content-box {
+  background: linear-gradient(135deg, #e0f7e0, #f0fff0);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15), 0 0 15px #2e8b57;
+}
+.content-box h2 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #2e8b57;
+  margin-bottom: 8px;
+}
+.content-box p, .content-box ul {
+  font-size: 1em;
+  color: #3b7550;
+  line-height: 1.5em;
+  margin: 5px 0;
+}
+.content-box ul {
+  padding-left: 20px;
+}
+
+/* ---------- PHOTO BOXES ---------- */
+.photo-boxes {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.photo-box {
+  width: 48%;
+  min-height: 200px;
+  background: #f0fff0cc;
+  border-radius: 15px;
+  border: 2px dashed #2e8b57;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.photo-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #2e8b57;
+}
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #3b7550;
+  margin-top: 20px;
+}
+
+/* FULLSCREEN MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-border">
+  <nav class="navbar">
+    <a href="ap-q3q4.html">⏪ Back to AP Page</a>
+  </nav>
+
+  <header>
+    <h1>💼 Sektor ng Paglilingkod</h1>
+    <p>Aralin 4 - Quarter 4</p>
+  </header>
+
+  <!-- CONTENT BOXES -->
+  <div class="content-box">
+    <h2>Ano ang Sektor ng Paglilingkod?</h2>
+    <p>Tumutukoy sa pagbibigay ng serbisyo sa tao at negosyo. Kabilang dito ang edukasyon, kalusugan, turismo, transportasyon, at mga serbisyo ng gobyerno.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Mga Halimbawa ng Paglilingkod</h2>
+    <ul>
+      <li>Edukasyon – paaralan, unibersidad, training centers</li>
+      <li>Kalusugan – ospital, klinika, mga health center</li>
+      <li>Transportasyon – bus, tren, airlines, shipping</li>
+      <li>Turismo – hotel, tour guides, resorts</li>
+      <li>Serbisyong Gobyerno – police, fire dept., social services</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Kahalagahan ng Sektor ng Paglilingkod</h2>
+    <ul>
+      <li>Nagbibigay trabaho sa milyun-milyong Pilipino</li>
+      <li>Nag-aambag sa GDP at ekonomiya</li>
+      <li>Nagtutulak sa kaunlaran ng komunidad</li>
+      <li>Pinapadali ang buhay ng tao at negosyo</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Suliranin sa Sektor ng Paglilingkod</h2>
+    <ul>
+      <li>Kakulangan sa skilled labor</li>
+      <li>Mahinang imprastraktura</li>
+      <li>Mataas na presyo ng serbisyo</li>
+      <li>Kakulangan sa access sa ilang serbisyo</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Sangay ng Pamahalaan na Tinutulungan ang Paglilingkod</h2>
+    <ul>
+      <li>Department of Education (DepEd)</li>
+      <li>Department of Health (DOH)</li>
+      <li>Department of Transportation (DOTr)</li>
+      <li>Department of Tourism (DOT)</li>
+      <li>Department of Social Welfare and Development (DSWD)</li>
+    </ul>
+  </div>
+
+ <!-- PHOTO BOXES -->
+<div class="photo-boxes">
+  <div class="photo-box" onclick="openModal('paglilingkod1.jpg')">
+    <img src="paglilingkod1.jpg" alt="Paglilingkod 1">
+  </div>
+  <div class="photo-box" onclick="openModal('paglilingkod2.jpg')">
+    <img src="paglilingkod2.jpg" alt="Paglilingkod 2">
+  </div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

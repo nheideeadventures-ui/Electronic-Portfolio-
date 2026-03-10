@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ========================= */
+/* 🌈 DREAMY LOFI EVENTS PAGE */
+/* ========================= */
+
+body.events-page{
+margin:0;
+font-family:'Quicksand',sans-serif;
+background:linear-gradient(135deg,#e9f5ff,#e6e9ff,#efe6ff,#f3e8ff);
+background-size:400% 400%;
+animation:dreamyGradient 20s ease infinite;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+@keyframes dreamyGradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* PAGE BORDER FRAME */
+
+.page-border{
+width:90%;
+max-width:1200px;
+margin:25px auto;
+padding:35px;
+background:rgba(255,255,255,0.65);
+border-radius:30px;
+backdrop-filter:blur(10px);
+
+border:10px double #c7d2fe;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.15),
+0 0 30px rgba(199,210,254,0.4);
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:center;
+padding:12px;
+margin-bottom:20px;
+}
+
+.navbar a{
+text-decoration:none;
+font-family:'Shadows Into Light',cursive;
+background:rgba(255,255,255,0.7);
+padding:8px 18px;
+border-radius:25px;
+color:#3730a3;
+font-size:1.2em;
+transition:0.3s;
+box-shadow:0 0 10px #c7d2fe;
+}
+
+.navbar a:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #a5b4fc;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+margin-bottom:30px;
+}
+
+header h1{
+font-family:'Shadows Into Light',cursive;
+font-size:3em;
+color:#6366f1;
+text-shadow:0 0 10px #c7d2fe,0 0 20px #d8b4fe;
+}
+
+header p{
+color:#4c1d95;
+}
+
+/* SECTION CONTAINERS */
+
+section{
+background:rgba(255,255,255,0.7);
+padding:25px;
+border-radius:25px;
+margin-bottom:35px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.08),
+0 0 20px rgba(199,210,254,0.3);
+}
+
+/* SECTION TITLES */
+
+section h2{
+font-family:'Shadows Into Light',cursive;
+text-align:center;
+font-size:2em;
+color:#6366f1;
+margin-bottom:10px;
+}
+
+section h3{
+font-family:'Shadows Into Light',cursive;
+text-align:center;
+color:#4c1d95;
+margin-top:25px;
+}
+
+/* EVENTS GRID */
+
+.events-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:15px;
+}
+
+/* EVENT CARDS */
+
+.event-card{
+width:260px;
+background:white;
+border-radius:20px;
+padding:10px;
+box-shadow:
+0 6px 18px rgba(0,0,0,0.12),
+0 0 20px rgba(199,210,254,0.3);
+transition:all 0.35s ease;
+cursor:pointer;
+}
+
+.event-card:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:
+0 10px 30px rgba(0,0,0,0.15),
+0 0 40px rgba(199,210,254,0.6);
+}
+
+.event-card img{
+width:100%;
+border-radius:15px;
+}
+
+.event-card p{
+text-align:center;
+margin-top:8px;
+font-size:0.95em;
+color:#4c1d95;
+font-weight:600;
+}
+
+/* NOLI VIDEO LINK */
+
+.noli-link{
+display:inline-block;
+padding:20px 30px;
+border-radius:20px;
+text-decoration:none;
+color:#4c1d95;
+background:white;
+box-shadow:0 0 20px #c7d2fe;
+transition:0.3s;
+}
+
+.noli-link:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px #a5b4fc;
+}
+
+/* REFLECTION */
+
+.reflection-section{
+line-height:1.7;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+box-shadow:0 0 30px #c7d2fe;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+margin-top:20px;
+font-family:'Shadows Into Light',cursive;
+color:#3730a3;
+}
+
+</style>
+</head>
+
+<body class="events-page">
+
+<div class="page-border">
+
+<nav class="navbar">
+<a href="q3q4.html">⏪ Back to 4th Quarter</a>
+</nav>
+
+<header>
+<h1>Events</h1>
+<p>Click on any photo to open it fullscreen ✨</p>
+</header>
+
+<!-- NOLI -->
+
+<section>
+
+<h2>Noli Me Tangere</h2>
+
+<div class="events-grid">
+
+<a href="https://youtu.be/BZzZuFfydwI?si=xx8O_dufx2xUmOqd" target="_blank" class="noli-link">
+🎭 Click here to watch the Noli Me Tangere video
+</a>
+
+</div>
+
+</section>
+
+<!-- 3RD QTR -->
+
+<section>
+
+<h2>3rd Quarter Events</h2>
+
+<h3>VPOP</h3>
+
+<div class="events-grid">
+<div class="event-card"><img src="vpop1.jpg"><p>VPOP 1</p></div>
+<div class="event-card"><img src="vpop2.jpg"><p>VPOP 2</p></div>
+<div class="event-card"><img src="vpop3.jpg"><p>VPOP 3</p></div>
+</div>
+
+<h3>Math Idol</h3>
+
+<div class="events-grid">
+<div class="event-card"><img src="math1.jpg"><p>Math Idol 1</p></div>
+<div class="event-card"><img src="math2.jpg"><p>Math Idol 2</p></div>
+<div class="event-card"><img src="math3.jpg"><p>Math Idol 3</p></div>
+</div>
+
+<h3>Booklandia</h3>
+
+<div class="events-grid">
+<div class="event-card"><img src="book1.jpg"><p>Booklandia 1</p></div>
+<div class="event-card"><img src="book2.jpg"><p>Booklandia 2</p></div>
+<div class="event-card"><img src="book3.jpg"><p>Booklandia 3</p></div>
+</div>
+
+</section>
+
+<!-- 4TH QTR -->
+
+<section>
+
+<h2>4th Quarter Events</h2>
+
+<h3>Miting de Avance</h3>
+
+<div class="events-grid">
+<div class="event-card"><img src="miting1.jpg"><p>Miting 1</p></div>
+<div class="event-card"><img src="miting2.jpg"><p>Miting 2</p></div>
+<div class="event-card"><img src="miting3.jpg"><p>Miting 3</p></div>
+</div>
+
+<h3>Street Dance</h3>
+
+<div class="events-grid">
+<div class="event-card"><img src="street1.jpg"><p>Street Dance 1</p></div>
+<div class="event-card"><img src="street2.jpg"><p>Street Dance 2</p></div>
+<div class="event-card"><img src="street3.jpg"><p>Street Dance 3</p></div>
+</div>
+
+<h3>Battle of the Bands</h3>
+
+<div class="events-grid">
+<div class="event-card"><img src="battle1.jpg"><p>BOTB 1</p></div>
+<div class="event-card"><img src="battle2.jpg"><p>BOTB 2</p></div>
+<div class="event-card"><img src="battle3.jpg"><p>BOTB 3</p></div>
+</div>
+
+</section>
+
+<!-- REFLECTION -->
+
+<section class="reflection-section">
+
+<h2>✨ Events Reflection</h2>
+
+<p>The different events in our school were really fun and memorable. It was nice to see how talented and creative the students were. Each activity had something unique, and it made the whole thing exciting for everyone.</p>
+
+<p>The Noli Me Tangere play was very interesting because it helped bring the story to life. Instead of just reading it in the book, we were able to see the characters and scenes acted out on stage.</p>
+
+<p>The VPOP event was very energetic and entertaining. All the sections sang and danced with confidence, and you could tell everyone worked really hard.</p>
+
+<p>Booklandia was one of the most creative events. The contestants dressed up as different book characters and acted like them.</p>
+
+<p>The Battle of the Bands was very exciting because the bands performed with a lot of energy and passion. LETS GOO GR 9 BANDS AND PADAYON AS 2026 BOTB CHAMP!</p>
+
+<p>The Street Dance performances were also impressive. Even though my group didn't win, I’m grateful for the experience.</p>
+
+<p>Lastly, the Miting de Avance reminded us how important it is to choose good leaders and vote wisely.</p>
+
+</section>
+
+<footer>
+Made with 💖 by Nicole Kierulf
+</footer>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+document.querySelectorAll(".event-card img").forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+});
+});
+
+lightbox.addEventListener("click",()=>{
+lightbox.style.display="none";
+});
+
+</script>
+
+</body>
+</html>
+
